@@ -3,24 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gemini AI Chatbot</title>
+    <title>Hackathon Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>Gemini AI Chatbot</h1>
-      <div id="chat-box" class="chat-box"></div>
-      <form id="chat-form">
-        <input
-          type="text"
-          id="user-input"
-          placeholder="Type your message..."
-          autocomplete="off"
-          required
-        />
-        <button type="submit">Send</button>
-      </form>
+    <div class="app">
+      <header class="header">
+        <div class="header-inner">
+          <div class="header-brand">
+            <div class="header-icon">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
+              </svg>
+            </div>
+            <div>
+              <h1 class="header-title">Hackathon Assistant</h1>
+              <p class="header-sub">Powered by Gemini AI</p>
+            </div>
+          </div>
+          <div class="header-status">
+            <span class="status-dot"></span>
+            <span class="status-text">Online</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="chat-area">
+        <div id="chat-box" class="chat-messages"></div>
+      </main>
+
+      <footer class="input-area">
+        <form id="chat-form" class="input-form">
+          <div class="input-wrapper">
+            <input
+              type="text"
+              id="user-input"
+              placeholder="Ask about hackathons, project ideas, tech stacks..."
+              autocomplete="off"
+              required
+            />
+            <button type="submit" id="send-btn" aria-label="Send message">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+            </button>
+          </div>
+        </form>
+      </footer>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="script.js"></script>
   </body>
